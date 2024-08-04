@@ -1,0 +1,142 @@
+.experience__categories {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    /* flex-wrap: wrap; */
+    margin-right: 3%;
+    
+    margin: auto;
+    margin-bottom: 8%;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: MyFont;
+   src: url('../../assets/fonts/custom.otf');
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+       
+    }
+    
+    
+}
+
+.box{
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin:auto;
+    margin-bottom: 20px;
+}
+
+.box h1{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box h2{
+    
+    font-family: MyFont;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size: 4em;
+    font-weight: 600;
+    animation: slideBottom 1s ease forwards;
+    /* animation-delay: .7s; */
+    letter-spacing: 0.1em;
+    text-shadow:0 0 10px #00b3ff,
+                0 0 20px #296482,
+                0 0 40px #296482,
+                0 0 80px #00b3ff,
+                0 0 120px #296482;
+
+    margin-bottom: 15px;
+    color: #4db5ff;
+
+    
+
+
+}
+
+.box h4{
+    margin-bottom: 10%;
+}
+
+
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    gap: 2rem;
+    background: var(--color-light);
+    color: var(--color-black);
+    padding: 0.6rem 2.5rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+    margin-bottom: 25%;
+  }
+  
+  /* .btn:hover {
+    background-color: transparent;
+    border-color: var(--color-light);
+    color: var(--color-white);
+    transform: translateY(0);
+  } */
+
+.btn.cat__btn {
+    text-transform: capitalize;
+    /* transition: all 500ms ease; */
+    
+    margin-bottom: 3rem;
+}
+
+/* Add this to your experience.css */
+
+.btn.cat__btn.active {
+    background-color: #4db5ff; 
+    color: var(--color-white); /* Adjust the text color as needed */
+    border-color: #25274d /* Optional: Add border color */
+}
+
+
+/* .btn.cat__btn:hover {
+    transform: translateY(0);
+} */
+
+.dark-text {
+    color: black;
+}
+.light-text{
+    color: rgb(180, 173, 173);
+}
+.list{
+    padding-left: 20px;
+}
+.list-item{
+    list-style-type: disc;
+    
+}
+
+
