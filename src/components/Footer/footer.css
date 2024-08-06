@@ -1,0 +1,101 @@
+footer {
+    background: var(--color-primary);
+    padding-top: 8rem;
+    box-shadow: 0 -1rem 1.5rem hsla(var(--primary-hue), 68%, 42%, 20%);
+    transition: var(--transition);
+}
+@font-face {
+    font-family: HeadingFont;
+    src: url('../../assets/fonts/batmfa__.ttf');
+}
+
+footer .nav__menu {
+    font-family: HeadingFont;
+    display: flex; /* Ensure flexbox layout for menu */
+    justify-content: center;
+    list-style: none; /* Remove bullet points from list */
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    
+    gap: 2rem; /* Add spacing between menu items */
+}
+
+
+footer .nav__menu a {
+    font-family: HeadingFont;
+    text-decoration: none; /* Remove underline from links */
+    color: var(--color-white); /* Ensure link text is visible */
+    font-weight: bold; /* Make text stand out */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+footer .nav__menu a:hover {
+    color: #2c2c6c; /* Change color on hover for effect */
+}
+
+.footer__socials {
+    width: fit-content;
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem auto 4rem;
+    
+}
+
+.footer__socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 0.6rem;
+    border: 2px solid #2c2c6c;
+    border-radius: var(--border-radius-3);
+    transition: opacity 0.3s, transform 0.3s; /* Add transition for smooth effect */
+}
+
+.footer__socials a:hover {
+    opacity: 0.7;
+    transform: translateY(-0.5rem);
+    border: 2px solid #fff;
+}
+
+.footer__copyright {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    
+    text-align: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
+}
+
+@media screen and (max-width:600px){
+    footer .nav__menu {
+        /* font-family: HeadingFont; */
+        display: flex; /* Ensure flexbox layout for menu */
+        justify-content: center;
+        list-style: none; /* Remove bullet points from list */
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+        font-weight: 600;
+        
+        gap: 1rem; /* Add spacing between menu items */
+    }
+    
+    
+    footer .nav__menu a {
+        /* font-family: HeadingFont; */
+        text-decoration: none; /* Remove underline from links */
+        color: var(--color-white); /* Ensure link text is visible */
+        font-weight: bold; /* Make text stand out */
+        transition: color 0.3s; /* Smooth transition for hover effect */
+    }
+
+}
+
+

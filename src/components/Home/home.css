@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@font-face {
+    font-family: HomeFont;
+    src: url('../../assets/fonts/docktrin.ttf');
+}
+
+@font-face {
+    font-family: MyFont;
+    src: url('../../assets/fonts/custom.otf');
+}
+
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+    
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+       
+    }
+    
+    
+}
+
+
+@keyframes ZoomIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+       
+    }
+    
+    
+}
+
+@font-face {
+    font-family: HeadingFont;
+    src: url('../../assets/fonts/batmfa__.ttf');
+}
+
+.home{
+    display: flex;
+    gap: 40%;
+    padding: 20px;
+    margin-top: 1rem;
+}
+
+
+.home-left{
+    margin-left: 9%;
+    margin-top: 8%;
+}
+
+.home-left h1{
+    font-size: 70px;
+    font-weight: 800;
+    font-family: HomeFont;
+    /* color: #AAABB8; */
+    color: #fff;
+    animation: slideBottom 1s ease forwards;
+
+
+}
+
+.home-left h2{
+    font-size: 50px;
+    font-weight: 500;
+    
+    /* color: #AAABB8; */
+    color: white;
+    animation: slideRight 1s ease forwards;
+
+}
+
+.home-left h4{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 800;
+    animation: slideRight 1s ease forwards;
+}
+.home-left h4 span{
+    color:#4db5ff;
+    font-size: 20px;
+    font-family: HeadingFont;
+}
+
+.home-left h2 span{
+    font-family: MyFont;
+    font-weight: 700;
+    color: #4db5ff;
+    /* color: #AAABB8; */
+}
+
+.home-left .button{
+    margin-top: 6%;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.home-left a .button{
+    margin-top: 6%;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+.buttons{
+    display: flex;
+    margin-top: 45px;
+    font-size: 15px;
+    animation: slideTop 1s ease forwards;
+
+    
+}
+.btn{
+    background: #fff;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    transform-style: preserve-3d;
+    animation: slideLeft 1s ease forwards;
+
+}
+
+.earth{
+    position: absolute;
+    display: block;
+    top:47%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 350px;
+    background: url('../../assets/images/earth1.jpeg');
+    image-rendering: auto;
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    /* background-repeat: no-repeat;  */
+    box-shadow: inset 0 0 20px #4db5ff,
+                    0 0 30px #4069ff,
+                    0 0 40px #4db5ff;
+    border-radius: 50%;
+    animation: animateEarth 15s linear infinite;
+}
+
+@keyframes animateEarth{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 500px 0;
+    }
+}
+
+.circle{
+    display: block;
+    transform-style: preserve-3d;
+    animation: animateText 10s linear infinite;
+    margin-left: 51%;
+    /* margin-top: -48%; */
+    
+
+}
+.circle span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #25274D;
+    font-size: 3em;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 5px 11px;
+    transform: rotateY(calc(var(--i) * calc(360deg / 28))) translateZ(190px);
+    border-top: 4px solid #25274D;
+    border-bottom: 4px solid #25274D;
+
+
+}
+
+.circle span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    transform: translateZ(-6px)
+
+}
+@keyframes animateText{
+    0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);
+
+    }
+    100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);
+
+    }
+}
+
+@media screen and (max-width: 500px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10%;
+        margin-top: 1rem;
+    }
+    
+    .earth{
+        display: block;
+        position: absolute;
+        display: block;
+        top:20%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 250px;
+        height: 250px;
+        background: url('../../assets/images/earth1.jpeg');
+        image-rendering: auto;
+        background-size: 100% 100%;
+        background-repeat: repeat-x;
+        /* background-repeat: no-repeat;  */
+        box-shadow: inset 0 0 20px #4db5ff,
+                        0 0 30px #4069ff,
+                        0 0 40px #4db5ff;
+        border-radius: 50%;
+        animation: animateEarth 15s linear infinite;
+    }
+    .circle{
+        display: block;
+        display: block;
+        transform-style: preserve-3d;
+        animation: animateText 10s linear infinite;
+        margin-left: -2%;
+        margin-top: -135%;
+
+    }
+    .circle span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        color: #25274D;
+        font-size: 3em;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        padding: 5px 11px;
+        transform: rotateY(calc(var(--i) * calc(360deg / 28))) translateZ(140px);
+        border-top: 4px solid #25274D;
+        border-bottom: 4px solid #25274D;
+    
+    
+    }
+    .home-left h1{
+        font-size: 40px;
+        font-weight: 800;
+        font-family: HomeFont;
+        /* color: #AAABB8; */
+        color: #fff;
+        animation: slideBottom 1s ease forwards;
+    
+    
+    }
+    .home-left h2{
+        font-size: 25px;
+        font-weight: 500;
+        
+        /* color: #AAABB8; */
+        color: white;
+        animation: slideRight 1s ease forwards;
+        margin-bottom: 10%;
+    
+    }
+    .buttons a{
+        
+        font-size: 12px;
+       
+    
+        
+    }
+
+    .home-left h4{
+        font-size: 10px;
+        color: #fff;
+        font-weight: 800;
+        animation: slideRight 1s ease forwards;
+    }
+    .home-left h4 span{
+        color:#4db5ff;
+        font-size: 11px;
+        font-family: HeadingFont;
+    }
+}
+
+@media screen and (min-width: 700px ) and (max-width:1024px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20%;
+        margin-top: 1rem;
+    }
+    .home-left{
+        margin: auto;
+    }
+    .earth{
+        display: block;
+        position: absolute;
+        display: block;
+        top:20%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 350px;
+        background: url('../../assets/images/earth1.jpeg');
+        image-rendering: auto;
+        background-size: 100% 100%;
+        background-repeat: repeat-x;
+        /* background-repeat: no-repeat;  */
+        box-shadow: inset 0 0 20px #4db5ff,
+                        0 0 30px #4069ff,
+                        0 0 40px #4db5ff;
+        border-radius: 50%;
+        animation: animateEarth 15s linear infinite;
+    }
+    .circle{
+        display: block;
+        display: block;
+        transform-style: preserve-3d;
+        animation: animateText 10s linear infinite;
+        margin-left: -2%;
+        margin-top: -90%;
+
+    }
+    .circle span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+        color: #25274D;
+        font-size: 3em;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        padding: 5px 11px;
+        transform: rotateY(calc(var(--i) * calc(360deg / 28))) translateZ(196px);
+        border-top: 4px solid #25274D;
+        border-bottom: 4px solid #25274D;
+    
+    
+    }
+    .home-left h1{
+        font-size: 75px;
+        font-weight: 800;
+        font-family: HomeFont;
+        /* color: #AAABB8; */
+        color: #fff;
+        animation: slideBottom 1s ease forwards;
+    
+    
+    }
+    .home-left h2{
+        font-size: 55px;
+        font-weight: 500;
+        
+        /* color: #AAABB8; */
+        color: white;
+        animation: slideRight 1s ease forwards;
+        margin-bottom: 10%;
+    
+    }
+    .home-left h4{
+        font-size: 20px;
+        color: #fff;
+        font-weight: 800;
+        animation: slideRight 1s ease forwards;
+    }
+    .home-left h4 span{
+        color:#4db5ff;
+        font-size: 25px;
+        font-family: HeadingFont;
+    }
+}

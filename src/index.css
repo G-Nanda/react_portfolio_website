@@ -12,11 +12,19 @@
 
 :root{
   --primary-hue: 270;
-  
+  --black-lightness: 15%;
+  --dark-lightness: 44%;
   --light-lightness: 94%;
- 
+  --white-lightness: 100%;
+  --color-primary: #4db5ff;
+  /* --color-primary: hsl(var(--primary-hue), 89%, 41%); */
+  --color-white: hsl(0, 5%, var(--white-lightness));
+  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
+  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
+  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
 
-  --color-light1: hsl(var(--primary-hue), 5%, var(--light-lightness));
+
+
 
 
 
@@ -24,8 +32,7 @@
   --color-bg-variant:#2c2c6c;
   --color-primary: #4db5ff;
   --color-primary-variant:rgba(77,181,255,0.4);
-  --color-white:#fff;
-  --color-light:rgba(212, 224, 189, 0.6);
+ 
 
   --transition:all 400ms ease;
 
@@ -101,9 +108,17 @@ h1{
 
 
 
-section{
-  margin-top:8rem;
+/* section{
+  margin-top:4rem;
+  width: 100%;
   
+} */
+
+section {
+  margin-top:4rem;
+  min-height: 100vh; /* Ensure each section is at least viewport height */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 a{
@@ -116,29 +131,48 @@ a:hover{
   color: var(--color-white);
 }
 
-.btn{
-  width: max-content;
-  display: inline block;
-  color:var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 30px;
+.btn {
+  display: inline-block;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-light);
+  color: var(--color-black);
+  padding: 0.6rem 2.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-2);
   cursor: pointer;
-  border: 1px solid var(--color-primary);
-  transition: var(--transition);
-  background: var(--color-light1);
-
 }
 
-.btn:hover{
-  background: var(--color-light1);
-  border-color: transparent;
-  color: #2c2c6c;
+.btn:hover {
+  background-color: transparent;
+  border-color: var(--color-light);
+  color: var(--color-white);
+  transform: translateY(-0.5rem);
 }
 
-.btn-primary{
+.btn.white {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn.white:hover {
+  background: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn.primary {
   background: var(--color-primary);
-  color: var(--color-bg);
+  /* text color always white that's why i didn't use a variable color */
+  color: white;
+}
 
+.btn.primary:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 img{

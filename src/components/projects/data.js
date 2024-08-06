@@ -45,8 +45,8 @@ const data = [
     title: "Crop Disease Detection",
     desc: "Designed and implemented a user-friendly Medical App UI using Flutter, ensuring a seamless and intuitive experience for healthcare professionals and patients.",
 
-    demo: "https://github.com/Muckesh/Medical_App_Ui",
-    github: "https://github.com/Muckesh/Medical_App_Ui",
+    demo: "https://github.com/G-Nanda/Crop-Disease-Detection-App/blob/main/README.md",
+    github: "https://github.com/G-Nanda/Crop-Disease-Detection-App",
   },
   {
     id: 5,

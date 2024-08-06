@@ -4,24 +4,22 @@ import './index.css'
 import Project from './components/projects/project';
 import Home from './components/Home/home';
 import Experience  from './components/Experience/experience';
-import Skill from './components/Skills/skill';
+import Footer from './components/Footer/footer';
 import Contact from './components/contact/contact';
 import Nav from './components/nav/nav';
 import React from 'react'
+import About from './components/About/about';
 
 const App = () => {
   return (
     <div className='.container'>
-      {/* <Home />
-      <Skill/> */}
+      <Home/>
       <Nav />
-      {/* <Experience/>
-      <br></br>
-      <br></br>
-      <br></br>*/}
+      <About/>
       <Experience/>
       <Project /> 
-      {/* <Contact/> */}
+      <Contact/>
+      <Footer/>
     </div>
   )
 }

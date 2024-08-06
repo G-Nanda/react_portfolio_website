@@ -21,20 +21,20 @@ export default function Experience() {
         <section id="experience">
             <div className="box">
 
-                <h2>EXPERIENCE</h2>
+                <h2>MY JOURNEY</h2>
                 <h1 >Discover My Expedition in Academia and the Digital Realm</h1>
             </div>
             
                 
             
             <div className="experience__categories">
-                <button className={`btn cat__btn ${selectedCategory === "Education" ? "active" : ""}`} onClick={() => handleCategoryChange("Education")}>
+                <a className={`btn cat__btn ${selectedCategory === "Education" ? "active" : ""}`} onClick={() => handleCategoryChange("Education")}>
                     
                     Education
-                </button>
-                <button className={`btn cat__btn ${selectedCategory === "Work" ? "active" : ""}`} onClick={() => handleCategoryChange("Work")}>
+                </a>
+                <a className={`btn cat__btn ${selectedCategory === "Work" ? "active" : ""}`} onClick={() => handleCategoryChange("Work")}>
                     Work
-                </button>
+                </a>
             </div>
             <VerticalTimeline>
                 {filteredData.map((element) => {
